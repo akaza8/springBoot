@@ -1,0 +1,31 @@
+### Get Products
+POST http://localhost:8080/api/products
+Content-Type: application/json
+
+{
+  "name": "smartphone",
+  "description": "Latest 5G smartphone",
+  "price": 12000,
+  "categoryId": "1"
+}
+
+### GET Product
+GET http://localhost:8080/api/products/2
+Accept: application/json
+
+### Create Category
+POST http://localhost:8080/api/categories
+Content-Type: application/json
+
+{
+  "name": "Elec"
+}
+
+
+### GET Category
+GET http://localhost:8080/api/categories/3
+Accept: application/json
+
+### Delete Category
+DELETE http://localhost:8080/api/categories/3
+Accept: application/json
