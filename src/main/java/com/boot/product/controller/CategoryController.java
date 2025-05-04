@@ -15,15 +15,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 public class CategoryController {
     private CategoryService categoryService;
     @PostMapping
-    public ResponseEntity<CategoryDTO> createProduct(@RequestBody CategoryDTO categoryDTO) {
+    public ResponseEntity<CategoryDTO> createCategory(@RequestBody CategoryDTO categoryDTO) {
         return new ResponseEntity<>(categoryService.createCategory(categoryDTO), HttpStatus.CREATED);
     }
     @GetMapping( "/{id}")
-    public CategoryDTO getProduct(@PathVariable Long id) {
+    public CategoryDTO getCategory(@PathVariable Long id) {
         return categoryService.getCategory(id);
     }
     @DeleteMapping("/{id}")
-    public void deleteProduct(@PathVariable Long id) {
+    public void deleteCategory(@PathVariable Long id) {
         categoryService.deleteCategory(id);
     }
 //    @GetMapping("/{id}/products")
