@@ -8,13 +8,16 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.mvc.method.annotation.JsonViewResponseBodyAdvice;
 
+import java.util.List;
+
 @Service
 @AllArgsConstructor
 public class CategoryService {
     private CategoryRepository categoryRepository;
+
     public CategoryDTO createCategory(CategoryDTO categoryDTO) {
         Category category = CategoryMapper.toCategoryEntity(categoryDTO);
-        category=categoryRepository.save(category);
+        category = categoryRepository.save(category);
         return CategoryMapper.toCategoryDTO(category);
     }
 
@@ -27,7 +30,8 @@ public class CategoryService {
         categoryRepository.deleteById(id);
     }
 
-//    public void findProductsByCategory(Long id) {
-//        Category category = categoryRepository.findById(id).;
-//    }
+    public List<CategoryDTO> getAllCategories() {
+        return categoryRepository.findAll().stream().map(CategoryMapper::toCategoryDTO).toList();
+    }
+
 }

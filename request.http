@@ -3,7 +3,7 @@ POST http://localhost:8080/api/products
 Content-Type: application/json
 
 {
-  "name": "smartphone",
+  "name": "sd",
   "description": "Latest 5G smartphone",
   "price": 12000,
   "categoryId": "1"
@@ -18,12 +18,16 @@ POST http://localhost:8080/api/categories
 Content-Type: application/json
 
 {
-  "name": "Phone"
+  "name": "def"
 }
 
 
 ### GET Category
 GET http://localhost:8080/api/categories/1
+Accept: application/json
+
+### GET All Categories
+GET http://localhost:8080/api/categories
 Accept: application/json
 
 ### Delete Category
@@ -35,9 +39,27 @@ POST http://localhost:8080/api/products
 Content-Type: application/json
 
 {
-  "name": "readme7",
+  "name": "te",
   "description": "Phone category",
   "price": 22700,
-  "categoryId": 1
+  "categoryId": 4
 }
 
+### Get all products
+GET http://localhost:8080/api/products
+Content-Type: application/json
+
+### Delete product
+DELETE http://localhost:8080/api/products/1
+
+### Update product
+PUT http://localhost:8080/api/products
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "no might",
+  "price": 23700,
+  "description": "xyz",
+  "categoryId": 2
+}
