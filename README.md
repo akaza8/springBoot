@@ -18,15 +18,16 @@ This project demonstrates how to build a RESTful API using **Spring Boot**, **Po
 
 ## 📦 Getting Started
 
-### 1. Clone the Repository
+### Setup
 ```bash
+### 1. Clone the Repository
 git clone https://github.com/akaza8/springBoot
 cd springBoot/productList
 
-### 2. Clone the Repository
+### 2. Build the project
 mvn clean package
 
-### 3. Build the Project
+### 3. Run with docker
 docker-compose up --build
 
 ### 4. For Api Endpoints
